@@ -21,6 +21,7 @@ const middlewares = (app) => {
 
 const routes = (app) => {
   app.use('/api/auth', authRoutes);
+  app.use('/api/empresas', empresaRoutes);
 };
 
 const conectarDB = async () => {
