@@ -10,14 +10,29 @@
 			"name": "Registro de empresa",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQURNSU4iLCJpYXQiOjE3NDEwOTc5OTYsImV4cCI6MTc0MjM5Mzk5Nn0.6Lp4clNIe3FdKNKOfe8xHNRK95t0zXJeAPqLlb6p9Ss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Campero\",\r\n  \"descripcion\": \"Empresa de comida\",\r\n  \"nivelImpacto\": \"nacional\",\r\n  \"aniosTrayectoria\": 10,\r\n  \"categoria\": \"Comida\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:3050/api/empresas",
+					"raw": "http://localhost:3051/api/empresas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3050",
+					"port": "3051",
 					"path": [
 						"api",
 						"empresas"
@@ -28,16 +43,34 @@
 		},
 		{
 			"name": "Listado de Empresa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQURNSU4iLCJpYXQiOjE3NDEwOTc5OTYsImV4cCI6MTc0MjM5Mzk5Nn0.6Lp4clNIe3FdKNKOfe8xHNRK95t0zXJeAPqLlb6p9Ss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:3050/api/empresas",
+					"raw": "http://localhost:3051/api/empresas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3050",
+					"port": "3051",
 					"path": [
 						"api",
 						"empresas"
@@ -53,7 +86,7 @@
 				"header": [
 					{
 						"key": "x-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQURNSU4iLCJpYXQiOjE3NDEwMTQzMzcsImV4cCI6MTc0MjMxMDMzN30.lwkIVvSJmIMZdfCp8a-YpuOipqtBcwaw0nYbMOpgHZI",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQURNSU4iLCJpYXQiOjE3NDEwOTc5OTYsImV4cCI6MTc0MjM5Mzk5Nn0.6Lp4clNIe3FdKNKOfe8xHNRK95t0zXJeAPqLlb6p9Ss",
 						"type": "text"
 					}
 				],
@@ -67,7 +100,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3051/api/empresas/67c5c5caef7e1548e105ad9d",
+					"raw": "http://localhost:3051/api/empresas/67c70ca0ea91e4ca103dbd59",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -76,7 +109,7 @@
 					"path": [
 						"api",
 						"empresas",
-						"67c5c5caef7e1548e105ad9d"
+						"67c70ca0ea91e4ca103dbd59"
 					]
 				}
 			},

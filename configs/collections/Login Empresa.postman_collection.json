@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n  \"nombre\": \"Daniel\",\r\n  \"email\": \"daniel@gmail.com\",\r\n  \"password\": \"daniel2024\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,7 +40,29 @@
 			"name": "Login",
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"daniel@gmail.com\",\r\n  \"password\": \"daniel2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3051/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3051",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
 			},
 			"response": []
 		}
