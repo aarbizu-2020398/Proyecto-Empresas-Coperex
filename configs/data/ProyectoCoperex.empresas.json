@@ -1,0 +1,53 @@
+[{
+  "_id": {
+    "$oid": "67c70c29ea91e4ca103dbd53"
+  },
+  "nombre": "Empresa Ejemplo",
+  "descripcion": "Descripción de la empresa",
+  "nivelImpacto": "nacional",
+  "aniosTrayectoria": 5,
+  "categoria": "Tecnología",
+  "imagen": "url_de_imagen.jpg",
+  "createdAt": {
+    "$date": "2025-03-04T14:20:25.628Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T14:20:25.628Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c70c6cea91e4ca103dbd56"
+  },
+  "nombre": "Irtra",
+  "descripcion": "Parque de diversiones",
+  "nivelImpacto": "nacional",
+  "aniosTrayectoria": 5,
+  "categoria": "Diversiones",
+  "createdAt": {
+    "$date": "2025-03-04T14:21:32.671Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T14:21:32.671Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c70ca0ea91e4ca103dbd59"
+  },
+  "nombre": "Renap",
+  "descripcion": "Empresa de Comida",
+  "nivelImpacto": "nacional",
+  "aniosTrayectoria": 10,
+  "categoria": "Comida",
+  "createdAt": {
+    "$date": "2025-03-04T14:22:24.507Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T14:22:46.467Z"
+  },
+  "__v": 0,
+  "imagen": "url_de_imagen.jpg"
+}]

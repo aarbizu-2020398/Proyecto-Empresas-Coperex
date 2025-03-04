@@ -32,7 +32,7 @@ const conectarDB = async () => {
     console.error('Error conectando a la base de datos', error);
     process.exit(1);
   }
-};
+}
 
 export const initServer = async () => {
   const app = express();

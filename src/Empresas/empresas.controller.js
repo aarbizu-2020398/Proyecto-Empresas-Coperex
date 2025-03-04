@@ -1,5 +1,11 @@
 import Empresa from '../Empresas/empresas.model.js';
 import ExcelJS from 'exceljs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export const createEmpresa = async (req, res) => {
   try {
@@ -57,7 +63,7 @@ export const getEmpresas = async (req, res) => {
       message: 'Error interno del servidor'
     });
   }
-}
+};
 
 export const updateEmpresa = async (req, res) => {
   try {
@@ -91,6 +97,7 @@ export const updateEmpresa = async (req, res) => {
   }
 };
 
+
 export const generateExcelReport = async (req, res) => {
   try {
     const empresas = await Empresa.find();
@@ -98,6 +105,7 @@ export const generateExcelReport = async (req, res) => {
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Empresas');
 
+    
     worksheet.addRow([
       'ID',
       'Nombre',
@@ -107,6 +115,7 @@ export const generateExcelReport = async (req, res) => {
       'Categoría',
       'Imagen'
     ]);
+
 
     empresas.forEach((emp) => {
       worksheet.addRow([
@@ -120,17 +129,16 @@ export const generateExcelReport = async (req, res) => {
       ]);
     });
 
-    res.setHeader(
-      'Content-Type',
-      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    );
-    res.setHeader(
-      'Content-Disposition',
-      'attachment; filename=empresas.xlsx'
-    );
 
-    await workbook.xlsx.write(res);
-    res.end();
+    const filePath = path.join(__dirname, '../../excel', 'empresas.xlsx');
+
+    
+    await workbook.xlsx.writeFile(filePath);
+
+    return res.status(200).json({
+      success: true,
+      message: 'Reporte generado y guardado en la carpeta /excel'
+    });
   } catch (error) {
     console.error('Error al generar reporte Excel:', error);
     return res.status(500).json({
